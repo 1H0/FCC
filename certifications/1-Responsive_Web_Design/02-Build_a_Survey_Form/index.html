@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Template - FCC 1h0</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="content" class="container">
+    <h1 id="title">Form</h1>
+    <p id="description">This is a cool form!</p>
+    <form id="survey-form">
+
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input id="name" class="form-control" type="text" placeholder="Jeff White" required>
+      </div>
+      
+      <div class="form-group">
+        <label id="email-label" for="email">E-Mail</label>
+        <input id="email" class="form-control" type="email" placeholder="jeff@example.com" required>
+      </div>
+      
+      <div class="form-group">
+        <label id="number-label" for="number">Number of Cats</label>
+        <input id="number" class="form-control" type="number" min="0" max="100" placeholder="12"></input>
+      </div>
+
+      <div class="form-group">
+        <label for="dropdown">Your Operating System</label>
+        <select id="dropdown" class="form-control">
+          <option disabled selected>Select your OS</option>
+          <option value="windows">Windows</option>
+          <option value="macos">MacOS</option>
+          <option value="linux">Linux</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <p>Fav Color</p>
+        <div class="form-check">
+          <input id="color-red" class="form-check-input" name="color" value="red" type="radio" checked />
+          <label class="form-check-label" for="color-red">Red</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="color-green" class="form-check-input" name="color" value="green" type="radio" />
+          <label class="form-check-label" for="color-green">Green</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="color-yellow" class="form-check-input" name="color" value="yellow" type="radio" />
+          <label class="form-check-label" for="color-yellow">Yellow</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="color-blue" class="form-check-input" name="color" value="blue" type="radio" />
+          <label class="form-check-label" for="color-blue">Blue</label>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <p>Food You Like</p>
+        <div class="form-check">
+          <input id="food-burger" class="form-check-input" type="checkbox" name="food" value="burger" checked>
+          <label class="form-check-label" for="food-burger">Burger</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="food-pizza" class="form-check-input" type="checkbox" name="food" value="pizza">
+          <label class="form-check-label" for="food-pizza">Pizza</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="food-salad" class="form-check-input" type="checkbox" name="food" value="salad">
+          <label class="form-check-label" for="food-salad">Salad</label>
+        </div>
+  
+        <div class="form-check">
+          <input id="food-sandwich" class="form-check-input" type="checkbox" name="food" value="sandwich">
+          <label class="form-check-label" for="food-sandwich">Sandwich</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <textarea class="form-control"></textarea>
+      </div>
+
+      <button id="submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+  
+  <script src="app.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
