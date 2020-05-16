@@ -8,3 +8,18 @@
   align-items: center;
   justify-content: center;
 }
+
+.card {
+  margin: 2rem;
+}
+
+code {
+  border-radius: .25rem;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
