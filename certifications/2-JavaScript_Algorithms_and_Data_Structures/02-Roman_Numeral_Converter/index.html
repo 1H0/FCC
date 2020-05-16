@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Roman Numeral Converter - FCC 1h0</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="container center">
+    <h1>Roman Numeral Converter</h1>
+    <pre>
+      <code class="js">
+const dec = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+const rom = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"];
+
+const convertToRoman = num => {
+  let rs = "";
+  
+  for (var i = 0; i < dec.length; i++) {
+    while (dec[i] <= num) {
+      rs += rom[i];
+      num -= dec[i];
+    }
+  }
+
+  return rs;
+};
+
+convertToRoman(36); // XXXVI
+      </code>
+    </pre>
+  </div>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
