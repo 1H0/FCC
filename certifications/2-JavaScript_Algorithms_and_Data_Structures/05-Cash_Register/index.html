@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cash Register - FCC 1h0</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+  <div class="container center">
+    <h1>Cash Register</h1>
+    <pre>
+      <code class="js">
+const val = [
+  { name: "ONE HUNDRED", val: 100.0 },
+  { name: "TWENTY", val: 20.0 },
+  { name: "TEN", val: 10.0 },
+  { name: "FIVE", val: 5.0 },
+  { name: "ONE", val: 1.0 },
+  { name: "QUARTER", val: 0.25 },
+  { name: "DIME", val: 0.1 },
+  { name: "NICKEL", val: 0.05 },
+  { name: "PENNY", val: 0.01 }
+];
+
+const checkCashRegister = (price, cash, cid) => {
+  let res = { status: null, change: [] };
+  let change = cash - price;
+
+  let cashDrawer = cid.reduce(
+    (a, c) => {
+      a.total += c[1];
+      a[c[0]] = c[1];
+      return a;
+    },
+    { total: 0 }
+  );
+
+  if (cashDrawer.total === change) {
+    res.status = "CLOSED";
+    res.change = cid;
+    return res;
+  }
+
+  if (cashDrawer.total < change) {
+    res.status = "INSUFFICIENT_FUNDS";
+    return res;
+  }
+
+  let changeArr = val.reduce((a, c) => {
+    let val = 0;
+
+    while (cashDrawer[c.name] > 0 && change >= c.val) {
+      change -= c.val;
+      cashDrawer[c.name] -= c.val;
+      val += c.val;
+
+      change = Math.round(change * 100) / 100;
+    }
+    if (val > 0) {
+      a.push([c.name, val]);
+    }
+    return a;
+  }, []);
+
+  if (changeArr.length < 1 || change > 0) {
+    res.status = "INSUFFICIENT_FUNDS";
+    return res;
+  }
+
+  res.status = "OPEN";
+  res.change = changeArr;
+  return res;
+}
+
+console.log(checkCashRegister(19.5, 20.0, [
+  ["PENNY", 1.01],
+  ["NICKEL", 2.05],
+  ["DIME", 3.1],
+  ["QUARTER", 4.25],
+  ["ONE", 90.0],
+  ["FIVE", 55.0],
+  ["TEN", 20.0],
+  ["TWENTY", 60.0],
+  ["ONE HUNDRED", 100.0]
+]));
+      </code>
+    </pre>
+  </div>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/dracula.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
