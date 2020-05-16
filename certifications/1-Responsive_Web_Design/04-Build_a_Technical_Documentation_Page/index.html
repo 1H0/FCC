@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Technical Documentation - FCC 1h0</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main id="main-doc" class="container">
+    <nav id="navbar">
+      <header class="h4">Local Storage in JavaScript</header>
+      <a href="#Einführung" class="nav-link">Einführung</a>
+      <a href="#Unterschied_zum_Cookie" class="nav-link">Unterschied zum Cookie</a>
+      <a href="#Wert_setzen" class="nav-link">Wert setzen</a>
+      <a href="#Wert_lesen" class="nav-link">Wert lesen</a>
+      <a href="#Schluss" class="nav-link">Schluss</a>
+    </nav>
+    <div id="content">
+      <section id ="Einführung" class="main-section">
+        <header class="h1">Einführung</header>
+        <p>Der <code>localStorage</code> sowie der <code>sessionStorage</code> erlauben es <strong>key / value</strong> Paare in Browser zu speichern.</p>
+      </section>
+      <section id="Unterschied_zum_Cookie" class="main-section">
+        <header class="h1">Unterschied zum Cookie</header>
+        <p>Zwischen Local Storage gibt es einige Unterschiede:</p>
+        <ul>
+          <li>Anders wie bei den Cookies werden die Objekte nicht bei jeder Anfrage an den Server geschickt.</li>
+          <li>Der Server kann zudem die Objekte nicht manipulieren.</li>
+          <li>Die Speicherung ist immer auf die Domain, das Protokoll sowie den Port gebunden. Die Objekte sind immer nur auf der Seite verfügbar, von welcher sie erstellt worden sind.</li>
+          <li>Lorem</li>
+          <li>Ipsum</li>
+        </ul>
+      </section>
+      <section id="Wert_setzen" class="main-section">
+        <header class="h1">Wert setzen</header>
+        <p>Um einen wert zu setzen wird das Kommando <code>localStorage.setItem('key', 'value')</code> verwendet. Dabei stellt 'key' der Name des Speicherobjekts dar.</p>
+        <code>
+          localStorage.setItem('test', 'hallo')
+        </code>
+      </section>
+      <section id ="Wert_lesen" class="main-section">
+        <header class="h1">Wert lesen</header>
+        <p>Um den Wert aus dem <strong>Local Storage</strong> zu lesen wird das Komando <code>localStorage.key</code> verwendet. Hierbei stellt <code>key</code> wieder den namen des Speicherobjekts dar.</p>
+        <code>
+          localStorage.setItem('test', 'hallo')
+        </code><br>
+        <code>
+          console.log(localStorage.test) // hallo
+        </code>
+      </section>
+      <section id="Schluss" class="main-section">
+        <header class="h1">Schluss</header>
+        <p>Danke für's lesen!</p>
+        <p>Congue nisi vitae suscipit tellus mauris a. Volutpat diam ut venenatis tellus in metus vulputate. Risus commodo viverra maecenas accumsan. Purus gravida quis blandit turpis cursus in hac. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Bibendum est ultricies integer quis auctor elit sed. Varius morbi enim nunc faucibus. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. In massa tempor nec feugiat nisl pretium fusce. Laoreet id donec ultrices tincidunt arcu non sodales neque.</p>
+        <p>Justo donec enim diam vulputate. Sit amet consectetur adipiscing elit ut. Cum sociis natoque penatibus et magnis. Mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan. Urna nec tincidunt praesent semper feugiat nibh. Vestibulum lectus mauris ultrices eros in. Urna neque viverra justo nec ultrices dui sapien eget mi. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras. Ultrices gravida dictum fusce ut placerat orci. Duis ut diam quam nulla porttitor massa id neque aliquam. Diam sit amet nisl suscipit adipiscing bibendum est ultricies integer. Scelerisque purus semper eget duis at tellus at. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Proin libero nunc consequat interdum varius sit. Morbi tristique senectus et netus et malesuada fames ac. Lorem ipsum dolor sit amet consectetur adipiscing. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Adipiscing elit duis tristique sollicitudin.</p>
+        <p>Id diam vel quam elementum pulvinar etiam non quam lacus. Orci a scelerisque purus semper eget duis. Eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar. Mi tempus imperdiet nulla malesuada pellentesque. Vel turpis nunc eget lorem dolor. Amet est placerat in egestas erat. Proin nibh nisl condimentum id venenatis a. Fusce ut placerat orci nulla. Aliquam purus sit amet luctus venenatis lectus magna fringilla. Vestibulum mattis ullamcorper velit sed ullamcorper. Pellentesque habitant morbi tristique senectus et netus. Commodo sed egestas egestas fringilla. Ut lectus arcu bibendum at varius vel pharetra. Tellus in hac habitasse platea dictumst vestibulum.</p>
+        <p>Fermentum dui faucibus in ornare quam viverra orci. Ornare quam viverra orci sagittis eu volutpat. Hac habitasse platea dictumst vestibulum. Bibendum enim facilisis gravida neque convallis a. Consequat mauris nunc congue nisi vitae suscipit tellus mauris. Massa vitae tortor condimentum lacinia quis vel eros donec ac. Proin sed libero enim sed faucibus turpis in eu mi. Pharetra vel turpis nunc eget lorem dolor. Amet nisl suscipit adipiscing bibendum. Turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Arcu odio ut sem nulla pharetra. Sed nisi lacus sed viverra. Facilisi etiam dignissim diam quis enim lobortis scelerisque. Phasellus egestas tellus rutrum tellus pellentesque eu. Amet purus gravida quis blandit turpis cursus in. Faucibus pulvinar elementum integer enim neque. Quisque egestas diam in arcu cursus euismod quis viverra nibh. Ut pharetra sit amet aliquam id diam maecenas. Tristique et egestas quis ipsum suspendisse. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Sem integer vitae justo eget magna. Sem fringilla ut morbi tincidunt augue interdum velit euismod. Lacus viverra vitae congue eu consequat ac. Id cursus metus aliquam eleifend mi in. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare. Enim lobortis scelerisque fermentum dui faucibus in. Nunc sed velit dignissim sodales.</p>
+      </section>
+    </div>
+  </main>
+  
+  <script src="app.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
